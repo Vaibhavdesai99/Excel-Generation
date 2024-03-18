@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <!-- Include ExcelJS library -->
+    <script src="https://cdn.jsdelivr.net/npm/exceljs/dist/exceljs.min.js"></script>
+    <!-- Include FileSaver library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <title>DivideExcel</title>
+    <style>
+      table {
+        border: 2px solid black;
+        /* background-color: blue; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Table 1: Mainline Welding Report -->
+    <table border="2" cellpadding="0" cellspacing="0" class="export-table">
+      <colgroup>
+        <col width="64" style="width: 48pt" />
+        <col
+          width="70"
+          style="
+            mso-width-source: userset;
+            mso-width-alt: 2560;
+            width: 53pt;
+            /* background-color: black; */
+          "
+        />
+        <col
+          width="140"
+          span="3"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          span="6"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+      </colgroup>
+      <tbody>
+        <!-- Content of Mainline Welding Report -->
+        <!-- added some space at top  -->
+        <tr height="20" style="height: 15pt">
+          <td height="20" width="64" style="height: 15pt; width: 48pt"></td>
+          <td width="70" style="width: 53pt; background-color: blue"></td>
+          <td width="140" style="width: 105pt"></td>
+          <td width="140" style="width: 105pt"></td>
+          <td width="140" style="width: 105pt"></td>
+          <td width="105" style="width: 79pt"></td>
+          <td width="140" style="width: 105pt"></td>
+          <td width="140" style="width: 105pt"></td>
+          <td width="105" style="width: 79pt"></td>
+          <td width="105" style="width: 79pt"></td>
+          <td width="105" style="width: 79pt"></td>
+          <td width="105" style="width: 79pt"></td>
+          <td width="105" style="width: 79pt"></td>
+          <td width="105" style="width: 79pt"></td>
+          <td width="140" style="width: 105pt"></td>
+          <td width="140" style="width: 105pt"></td>
+        </tr>
+        <tr height="100" style="mso-height-source: userset; height: 60pt">
+          <td height="80" style="height: 60pt"></td>
+          <td colspan="2" class="xl73" style="border-right: 0.5pt solid black">
+            &nbsp;
+          </td>
+          <td
+            colspan="11"
+            class="xl90"
+            style="
+              border-right: 0.5pt solid black;
+              border-left: none;
+              background-color: blueviolet;
+              text-align: center;
+            "
+          >
+            MAINLINE WELDING REPORT
+          </td>
+          <td
+            colspan="2"
+            class="xl77"
+            style="border-right: 1pt solid black; border-left: none"
+          >
+            &nbsp;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- End of Table 1: Mainline Welding Report -->
+
+    <!-- Table 2: Project Information -->
+    <table border="2" cellpadding="0" cellspacing="0" class="export-table">
+      <colgroup>
+        <col width="64" style="width: 48pt" />
+        <col
+          width="70"
+          style="mso-width-source: userset; mso-width-alt: 2560; width: 53pt"
+        />
+        <col
+          width="140"
+          span="3"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          span="6"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+      </colgroup>
+      <tbody>
+        <!-- Content of Project Information -->
+        <tr height="21" style="height: 15.75pt">
+          <td height="21" style="height: 15.75pt"></td>
+          <td colspan="2" class="xl81" style="border-right: 0.5pt solid black">
+            Project Name
+          </td>
+          <td
+            colspan="13"
+            class="xl83"
+            style="border-right: 1pt solid black; border-left: none"
+          >
+            Steel Pipeline in Hyderabad
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- End of Table 2: Project Information -->
+
+    <!-- Table 3: Client -->
+    <table border="2" cellpadding="0" cellspacing="0" class="export-table">
+      <colgroup>
+        <col width="64" style="width: 48pt" />
+        <col
+          width="70"
+          style="mso-width-source: userset; mso-width-alt: 2560; width: 53pt"
+        />
+        <col
+          width="140"
+          span="3"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          span="6"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+      </colgroup>
+      <tbody>
+        <!-- Content of Project Information -->
+        <tr height="21" style="height: 15.75pt">
+          <td height="21" style="height: 15.75pt"></td>
+          <td colspan="2" class="xl81" style="border-right: 0.5pt solid black">
+            Client
+          </td>
+          <td
+            colspan="10"
+            class="xl83"
+            style="border-right: 1pt solid black; border-left: none"
+          >
+            M/S Client
+          </td>
+          <td class="xl40" style="border-top: none; border-left: none">
+            Doc. No.
+          </td>
+          <td
+            colspan="2"
+            class="xl83"
+            style="border-right: 1pt solid black; border-left: none"
+          >
+            &nbsp;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!--------------------- End of Table 3: Client---------------------- -->
+
+    <!------------------------------ Table 4: Execution Partner------------------------------->
+    <table border="2" cellpadding="0" cellspacing="0" class="export-table">
+      <colgroup>
+        <col width="64" style="width: 48pt" />
+        <col
+          width="70"
+          style="mso-width-source: userset; mso-width-alt: 2560; width: 53pt"
+        />
+        <col
+          width="140"
+          span="3"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          span="6"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+      </colgroup>
+      <tbody>
+        <!-- Content of Project Information -->
+        <tr height="21" style="height: 15.75pt">
+          <td height="21" style="height: 15.75pt"></td>
+          <td colspan="2" class="xl81" style="border-right: 0.5pt solid black">
+            Execution Partner
+          </td>
+          <td
+            colspan="10"
+            class="xl83"
+            style="border-right: 1pt solid black; border-left: none"
+          >
+            M/S Execution Partner
+          </td>
+          <td class="xl66" style="border-top: none; border-left: none">
+            Report Genera<span style="display: none">ted Date</span>
+          </td>
+          <td
+            colspan="2"
+            class="xl83"
+            style="border-right: 1pt solid black; border-left: none"
+          >
+            4-2-2024
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!----------------------- End of Table 4: execution partner -------------------------->
+
+    <!------------------------------ Table 5:  M/S Contractor------------------------------->
+    <table border="2" cellpadding="0" cellspacing="0" class="export-table">
+      <colgroup>
+        <col width="64" style="width: 48pt" />
+        <col
+          width="70"
+          style="mso-width-source: userset; mso-width-alt: 2560; width: 53pt"
+        />
+        <col
+          width="140"
+          span="3"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          span="6"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+      </colgroup>
+      <tbody>
+        <!-- Content of Project Information -->
+        <tr height="21" style="height: 15.75pt">
+          <td height="21" style="height: 15.75pt"></td>
+          <td colspan="2" class="xl81" style="border-right: 0.5pt solid black">
+            Contractor
+          </td>
+          <td
+            colspan="13"
+            class="xl83"
+            style="border-right: 1pt solid black; border-left: none"
+          >
+            M/S Contractor
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!----------------------- End of Table 5:Contractor -------------------------->
+
+    <!------------------------------ Table 6: All columns related to pipe------------------------------->
+    <table border="2" cellpadding="0" cellspacing="0" class="export-table">
+      <colgroup>
+        <col width="64" style="width: 48pt" />
+        <col
+          width="70"
+          style="mso-width-source: userset; mso-width-alt: 2560; width: 53pt"
+        />
+        <col
+          width="140"
+          span="3"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          span="6"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+      </colgroup>
+      <tbody id="tableDataValues">
+        <tr height="21" style="height: 15.75pt">
+          <td height="21" style="height: 15.75pt"></td>
+          <td
+            rowspan="2"
+            class="xl84"
+            style="border-bottom: 0.5pt solid black; border-top: none"
+          >
+            Sr. No.
+          </td>
+          <td
+            rowspan="2"
+            class="xl86"
+            style="border-bottom: 0.5pt solid black; border-top: none"
+          >
+            Pipe No. / Unique Id
+          </td>
+          <td
+            rowspan="2"
+            class="xl86"
+            style="border-bottom: 0.5pt solid black; border-top: none"
+          >
+            Heat No.
+          </td>
+          <td
+            rowspan="2"
+            class="xl86"
+            style="border-bottom: 0.5pt solid black; border-top: none"
+          >
+            Coating No.
+          </td>
+          <td
+            rowspan="2"
+            class="xl86"
+            style="border-bottom: 0.5pt solid black; border-top: none"
+          >
+            Length (m)
+          </td>
+          <td
+            rowspan="2"
+            class="xl86"
+            style="border-bottom: 0.5pt solid black; border-top: none"
+          >
+            Bend Detail (in °)
+          </td>
+          <td
+            rowspan="2"
+            class="xl86"
+            style="border-bottom: 0.5pt solid black; border-top: none"
+          >
+            Weld Joint No.
+          </td>
+          <td
+            rowspan="2"
+            class="xl86"
+            style="border-bottom: 0.5pt solid black; border-top: none"
+          >
+            Fitup Inspection
+          </td>
+          <td
+            rowspan="2"
+            class="xl86"
+            style="border-bottom: 0.5pt solid black; border-top: none"
+          >
+            Welder Id
+          </td>
+          <td
+            colspan="4"
+            class="xl88"
+            style="border-right: 0.5pt solid black; border-left: none"
+          >
+            Welder No.
+          </td>
+          <td
+            rowspan="2"
+            class="xl86"
+            style="border-bottom: 0.5pt solid black; border-top: none"
+          >
+            WPS No.
+          </td>
+          <td
+            rowspan="2"
+            class="xl89"
+            style="border-bottom: 0.5pt solid black; border-top: none"
+          >
+            Remarks
+          </td>
+        </tr>
+        <tr height="21" style="height: 15.75pt">
+          <td height="21" style="height: 15.75pt"></td>
+          <td
+            class="xl67"
+            style="border-top: 10px solid blue; border-left: none"
+          >
+            Root Pass
+          </td>
+          <td class="xl67" style="border-top: none; border-left: none">
+            Hot Pass
+          </td>
+          <td class="xl67" style="border-top: none; border-left: none">
+            Filler Pass
+          </td>
+          <td class="xl67" style="border-top: none; border-left: none">
+            Cap Pass
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!----------------------- End of Table 6: All Columns related to columns -------------------------->
+
+    <!----------------------------- Table 7:Progress--------------------------------- -->
+    <table border="2" cellpadding="0" cellspacing="0" class="export-table">
+      <colgroup>
+        <col width="64" style="width: 48pt" />
+        <col
+          width="70"
+          style="mso-width-source: userset; mso-width-alt: 2560; width: 53pt"
+        />
+        <col
+          width="140"
+          span="3"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          span="6"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+      </colgroup>
+      <tbody>
+        <tr height="21" style="height: 15.75pt">
+          <td height="21" style="height: 15.75pt"></td>
+          <td colspan="15" class="xl81" style="border-right: 1pt solid black">
+            PROGRESS
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!------------------------------ End of Table 7: Progress---------------------- -->
+
+    <!----------------------------- Table 8:Total Joints Completed--------------------------------- -->
+    <table border="2" cellpadding="0" cellspacing="0" class="export-table">
+      <colgroup>
+        <col width="64" style="width: 48pt" />
+        <col
+          width="70"
+          style="mso-width-source: userset; mso-width-alt: 2560; width: 53pt"
+        />
+        <col
+          width="140"
+          span="3"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          span="6"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+      </colgroup>
+      <tbody>
+        <tr height="21" style="height: 15.75pt">
+          <td height="21" style="height: 15.75pt"></td>
+          <td
+            colspan="15"
+            class="xl91"
+            style="border-right: 1pt solid black; text-align: center"
+          >
+            Total Joint(s) Completed
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!------------------------------ End of Table 8: Total Joints Completed---------------------- -->
+
+    <!-- Table 9 Before and cumulative -->
+    <table border="2" cellpadding="0" cellspacing="0" class="export-table">
+      <colgroup>
+        <col width="64" style="width: 48pt" />
+        <col
+          width="70"
+          style="mso-width-source: userset; mso-width-alt: 2560; width: 53pt"
+        />
+        <col
+          width="140"
+          span="3"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          span="6"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+      </colgroup>
+      <tbody>
+        <tr height="21" style="height: 15.75pt">
+          <td height="21" style="height: 15.75pt"></td>
+          <td colspan="5" class="xl91" style="border-right: 0.5pt solid black">
+            1-9-2023 to 2-2-2024
+          </td>
+          <td
+            colspan="5"
+            class="xl92"
+            style="border-right: 0.5pt solid black; border-left: none"
+          >
+            Before 1-9-2023
+          </td>
+          <td
+            colspan="5"
+            class="xl92"
+            style="border-right: 1pt solid black; border-left: none"
+          >
+            Cumulative
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Table 9 Before and Cumulative -->
+
+    <!-- Table 10  result of Before and cumulative -->
+    <table border="2" cellpadding="0" cellspacing="0" class="export-table">
+      <colgroup>
+        <col width="64" style="width: 48pt" />
+        <col
+          width="70"
+          style="mso-width-source: userset; mso-width-alt: 2560; width: 53pt"
+        />
+        <col
+          width="140"
+          span="3"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          span="6"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+      </colgroup>
+      <tbody>
+        <tr height="21" style="height: 15.75pt">
+          <td height="21" style="height: 15.75pt"></td>
+          <td colspan="5" class="xl98" style="border-right: 0.5pt solid black">
+            4
+          </td>
+          <td
+            colspan="5"
+            class="xl93"
+            style="border-right: 0.5pt solid black; border-left: none"
+          >
+            0
+          </td>
+          <td
+            colspan="5"
+            class="xl92"
+            style="border-right: 1pt solid black; border-left: none"
+          >
+            4
+          </td>
+        </tr>
+        <tr height="20" style="height: 15pt">
+          <td height="20" style="height: 15pt"></td>
+          <td colspan="15" class="xl65" style="border-right: 1pt solid black">
+            &nbsp;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Table 10 result of Before and Cumulative -->
+
+    <!-- Table 11  Contractor and Client -->
+    <table border="2" cellpadding="0" cellspacing="0" class="export-table">
+      <colgroup>
+        <col width="64" style="width: 48pt" />
+        <col
+          width="70"
+          style="mso-width-source: userset; mso-width-alt: 2560; width: 53pt"
+        />
+        <col
+          width="140"
+          span="3"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          span="6"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+      </colgroup>
+      <tbody>
+        <tr height="21" style="height: 15.75pt">
+          <td height="21" style="height: 15.75pt"></td>
+          <td class="xl65" style="border-top: none">&nbsp;</td>
+          <td colspan="7" class="xl99">Contractor</td>
+          <td colspan="7" class="xl92" style="border-right: 1pt solid black">
+            Client
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Table 11 Contractor and client -->
+
+    <!-- Table 12  Contractor and Client -->
+    <table border="2" cellpadding="0" cellspacing="0" class="export-table">
+      <colgroup>
+        <col width="64" style="width: 48pt" />
+        <col
+          width="70"
+          style="mso-width-source: userset; mso-width-alt: 2560; width: 53pt"
+        />
+        <col
+          width="140"
+          span="3"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          span="6"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+      </colgroup>
+      <tbody>
+        <tr height="21" style="height: 15.75pt">
+          <td height="21" style="height: 15.75pt"></td>
+          <td class="xl71" style="border-top: none">Name</td>
+          <td
+            colspan="7"
+            class="xl93"
+            style="border-right: 0.5pt solid black; border-left: none"
+          >
+            M/S Contractor
+          </td>
+          <td
+            colspan="7"
+            class="xl93"
+            style="border-right: 1pt solid black; border-left: none"
+          >
+            M/S Client
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Table 12 Contractor and client -->
+
+    <!-- Table 13  Contractor and Client -->
+    <table border="2" cellpadding="0" cellspacing="0" class="export-table">
+      <colgroup>
+        <col width="64" style="width: 48pt" />
+        <col
+          width="70"
+          style="mso-width-source: userset; mso-width-alt: 2560; width: 53pt"
+        />
+        <col
+          width="140"
+          span="3"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+        <col
+          width="105"
+          span="6"
+          style="mso-width-source: userset; mso-width-alt: 3840; width: 79pt"
+        />
+        <col
+          width="140"
+          span="2"
+          style="mso-width-source: userset; mso-width-alt: 5120; width: 105pt"
+        />
+      </colgroup>
+      <tbody>
+        <tr height="21" style="height: 15.75pt">
+          <td height="21" style="height: 15.75pt"></td>
+          <td class="xl72" style="border-top: none">
+            Report Ge<span style="display: none">nerated Date</span>
+          </td>
+          <td
+            colspan="7"
+            class="xl94"
+            style="border-right: 0.5pt solid black; border-left: none"
+          >
+            1-9-2023 to 2-2-2024
+          </td>
+          <td
+            colspan="7"
+            class="xl94"
+            style="border-right: 1pt solid black; border-left: none"
+          >
+            1-9-2023 to 2-2-2024
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Table 13 Contractor and client -->
+
+    <!-- Button press to Get excel sheet -->
+    <button id="convertToExcel">Convert to Excel</button>
+  </body>
+  <script src="chat.js"></script>
+</html>
